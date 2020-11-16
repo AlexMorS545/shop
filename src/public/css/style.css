@@ -1,0 +1,341 @@
+@font-face {
+    font-family: Huntsman;
+    src: url('../fonts/Huntsman.otf');
+}
+
+@font-face {
+    font-family: Exo;
+    src: url('../fonts/Exo.otf');
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('../fonts/OpenSans.ttf');
+}
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+    font-family: "Open Sans", sans-serif;
+    color: #5e5e5e;
+}
+header {
+    background: url("../images/promo.jpg") no-repeat;
+    background-size: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.header-wrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    height: 80px;
+}
+.logo-wrp {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    background: url("../images/origami-logo.svg") no-repeat;
+    background-size: contain;
+}
+.logo-name {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-family: Huntsman, sans-serif;
+    color: white;
+}
+.menu-wrp {
+    flex: 1;
+}
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    /*margin: 0 40px 0 0;*/
+}
+.menu-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    padding: 0 30px;
+    height: 80px;
+    line-height: 80px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.menu-link:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.menu-link:hover {
+    background: #5e5e5e;
+}
+.fa-user {
+
+}
+.fa-user,
+.fa-shopping-basket {
+    padding: 0 30px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 25px;
+    color: white;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+.fa-user:hover,
+.fa-shopping-basket:hover {
+    background: #5e5e5e;
+}
+.promo {
+    background: url("../images/promo.jpg") no-repeat;
+    width: 100%;
+    height: 800px;
+    background-size: cover;
+    margin: -27px 0 0 0;
+}
+.title {
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+    color: #fff;
+    font-family: Exo, sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    word-spacing: 8px;
+    letter-spacing: 2px;
+}
+.present-wrp {
+    padding: 100px;
+    display: flex;
+}
+.txt-wrp {
+    margin: 0px 60px 0 0;
+}
+.txt-wrp p {
+    font-size: 18px;
+}
+.img img {
+    display: block;
+    width: 750px;
+}
+footer {
+    float: left;
+    width: 100%;
+    height: 300px;
+    background: url('../images/footerback.png');
+    color: #fff;
+}
+.footerInside {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+    height: 100%;
+}
+.copyrights {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.social {
+    padding-top: 20px;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.socialItem {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+}
+.contacts {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 340px;
+}
+.contactWrap {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+.contactIcon {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 10px;
+}
+.footerNav {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 200px;
+}
+.footerNav a {
+    display: block;
+    text-align: right;
+    color: #e6e09a;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.footerNav a:hover {
+    color: #fff;
+}
+h3 {
+    display: block;
+    text-align: center;
+    font-size: 34px;
+}
+.reviews-wrp {
+    padding: 0 100px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.reviews {
+    flex: 0 1 45%;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.autor-wrp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reviews-name {
+    display: block;
+    font-size: 26px;
+    color: #022554;
+    margin: 0 50px 0 0;
+}
+.form-wrp {
+    width: 800px;
+    margin: 50px auto;
+}
+.reviews-txt {
+    font-size: 18px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+textarea {
+    margin: 20px 0;
+}
+input,
+textarea {
+    padding: 10px;
+}
+.form-btn {
+    width: 150px;
+    align-self: center;
+    padding: 10px;
+    cursor: pointer;
+}
+.cat-title {
+    text-align: center;
+    margin: 80px 0;
+}
+.products-wrp {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 100px;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 0 0 50px 0;
+    padding: 20px;
+    flex: 0 1 30%;
+}
+.prod-img {
+    display: block;
+    width: 100%;
+}
+.prod-name {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 20px 0 0 0;
+}
+.short-desc {
+    margin: 20px 0 0 0;
+    text-transform: uppercase;
+}
+.price {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 20px 0 0 0;
+}
+.prod-link {
+    margin: 20px 0 0 0;
+    padding: 15px;
+    text-decoration: none;
+    background-color: #5E6464;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+.prod-link:hover {
+    background-color: #acaaaa;
+}
+
+.item-wrp {
+    margin: 70px 0;
+    padding: 0 100px;
+}
+.item {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+}
+.item-img {
+    display: block;
+    width: 900px;
+    margin-right: 50px;
+}
+.desc {
+    text-align: center;
+}
+.item-name {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.item-desc {
+    font-size: 20px;
+    text-align: left;
+}
+.item-price {
+    display: block;
+    margin: 40px 0;
+    font-size: 36px;
+}
+.item-btn {
+    padding: 10px 35px;
+    color: white;
+    background-color: #5E6464;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 5px;
+}
+.item-btn:hover {
+    background-color: #acaaaa;
+}
