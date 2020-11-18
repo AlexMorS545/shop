@@ -206,17 +206,18 @@ h3 {
     flex: 0 1 45%;
     border: 1px solid;
     border-radius: 5px;
-    padding: 20px;
     margin-bottom: 30px;
 }
-.autor-wrp {
+.author-wrp {
     display: flex;
     align-items: center;
-    justify-content: center;
+    line-height: 0;
+    border-bottom: 1px dashed #5e5e5e;
+    padding: 5px;
 }
 .reviews-name {
     display: block;
-    font-size: 26px;
+    font-size: 24px;
     color: #022554;
     margin: 0 50px 0 0;
 }
@@ -226,6 +227,8 @@ h3 {
 }
 .reviews-txt {
     font-size: 18px;
+    margin: 10px;
+    text-align: left;
 }
 .form {
     display: flex;
@@ -246,6 +249,8 @@ textarea {
     cursor: pointer;
 }
 .cat-title {
+    font-family: Exo, sans-serif;
+    font-size: 45px;
     text-align: center;
     margin: 80px 0;
 }
@@ -263,13 +268,18 @@ textarea {
     border-radius: 5px;
     margin: 0 0 50px 0;
     padding: 20px;
-    flex: 0 1 30%;
+    flex: 0 1 27%;
+    transition: all 0.3s ease-in-out;
+}
+.product:hover {
+    box-shadow: 1px 1px 21px -3px #020202;
 }
 .prod-img {
     display: block;
     width: 100%;
 }
 .prod-name {
+    font-family: Exo, sans-serif;
     font-size: 22px;
     text-transform: uppercase;
     font-weight: bold;

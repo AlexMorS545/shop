@@ -1,12 +1,13 @@
 <?php
-include_once ('modules/server.php');
-$sql = mysqli_query($connect, "SELECT * FROM catalog");
+if(isset($_GET['id'])) {
+	$id = (int)($_GET['id']);
+}
+include_once ('modules/config.php');
+$item = getProduct($connect, $id);
 ?>
 
 <div class="item-wrp">
 
-<?php while ($item = mysqli_fetch_assoc($sql)):?>
-  <?php if($item['id'] == $_GET['id']):?>
     <div class="item">
       <img src="<?= $item['image']?>" alt="item photo" class="item-img">
 			<div class="desc">
@@ -16,7 +17,5 @@ $sql = mysqli_query($connect, "SELECT * FROM catalog");
 				<button class="item-btn">Купить</button>
 			</div>
     </div>
-  <? endif;?>
-<?php endwhile;?>
 
 </div>
