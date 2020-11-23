@@ -6,13 +6,13 @@ $reviews = allReviews($connect);
 <div class="reviews-wrp">
   <?php if($reviews):?>
     <?php foreach($reviews as $review):?>
-      <div class="reviews">
-        <div class="author-wrp">
-          <p class="reviews-name"><?=$review['name']?>
-          <p class="reviews-date"><?=$review['data_creat']?></p>
-        </div>
-        <p class="reviews-txt"><?=$review['text']?></p>
-      </div>
+			<div class="reviews">
+				<div class="author-wrp">
+					<p class="reviews-name"><?=$review['name']?>
+					<p class="reviews-date"><?=$review['data_creat']?></p>
+				</div>
+				<p class="reviews-txt"><?=$review['text']?></p>
+			</div>
     <?php endforeach;?>
   <?php endif;?>
 </div>

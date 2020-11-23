@@ -2,8 +2,8 @@
 if(isset($_GET['id'])) {
 	$id = (int)($_GET['id']);
 }
-include_once ('modules/config.php');
-$item = getProduct($connect, $id);
+include_once('modules/config.php');
+$item = getProduct($connect, $id, 'catalog');
 ?>
 
 <div class="item-wrp">
