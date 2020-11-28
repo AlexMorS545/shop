@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 const SERVER = "localhost";
 const LOGIN = "root";
 const PASSWORD = "";

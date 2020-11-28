@@ -1,14 +1,14 @@
 <?php
 include_once ('../src/public/modules/config.php');
-$products = allProducts($connect, 'catalog');
+$products = getAllItems($connect, 'catalog');
 ?>
 
 <div class="products-wrp">
   <?php if($products):?>
     <?php foreach ($products as $product):?>
       <div class="product">
-        <a href="index.php?page=item&id=<?= $product['id']?>" class="img-link">
-          <img src="../src/public/<?= $product['image']?>" alt="product photo" class="prod-img">
+        <a href="index.php?page=edit&id=<?= $product['id']?>" class="img-link">
+          <img src="../src/public/images/products/<?= $product['image']?>" alt="product photo" class="prod-img">
         </a>
         <span class="prod-name"><?= $product['name']?></span>
         <span class="short-desc"><?= $product['short_desc']?></span>

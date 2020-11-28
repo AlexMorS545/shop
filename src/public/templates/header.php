@@ -1,3 +1,4 @@
+<?php session_start()?>
 <div class="header-wrp">
   <div class="logo-wrp">
     <div class="logo"></div>
@@ -12,19 +13,29 @@
     </ul>
   </div>
   <div class="icon-wrp">
-    <i class="far fa-user"></i>
+		<?php if(!isset($_SESSION['login'])):?>
+			<a class="user-name"><i class="far fa-user"></i></a>
+		<?php else: ?>
+			<a class="user-name"><?= $_SESSION['login'];?></a>
+		<?php endif;?>
     <i class="fas fa-shopping-basket"></i>
   </div>
 
 	<div class="user-wrp hidden" data-close="true">
 		<div class="user">
 			<i class="far fa-window-close" data-close="true"></i>
-			<form action="#" class="user-form">
-				<input type="text" class="name" placeholder="Ваш логин">
-				<input type="password" class="pass" placeholder="Ваш пароль">
-				<div class="btn-wrp">
-					<button class="user-btn">Войти</button>
-					<button class="user-btn">Регистрация</button>
+			<form action="modules/users.php" method="post" class="user-form">
+        <?php if(!isset($_SESSION['login'])):?>
+					<input type="text" class="name" placeholder="Ваш логин" name="name">
+					<input type="email" class="email" placeholder="Ваш email" name="email">
+					<input type="password" class="pass" placeholder="Ваш пароль" name="pass">
+					<div class="btn-wrp">
+					<button class="user-btn" name="enter">Войти</button>
+					<button class="user-btn" name="reg">Регистрация</button>
+				<?php else: ?>
+					<h2 class="cat-title"><?=$_SESSION['login']?></h2>
+					<button class="user-btn" name="exit">Выйти</button>
+				<?php endif;?>
 				</div>
 			</form>
 		</div>
