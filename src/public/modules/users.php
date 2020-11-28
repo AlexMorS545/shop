@@ -41,12 +41,12 @@ if (isset($_POST['enter'])) {
   $users = getAllItems($connect, 'users');
 
   foreach ($users as $user) {
-    if($login == $user['login'] and $email == $user['email'] and md5($pass) == $user['pass']) {
+
+    if($login==$user['login'] && $email==$user['email'] && md5($pass)==$user['password']) {
       $_SESSION['login'] = $login;
       header("Location: ../index.php");
     } else {
       print_r($user);
-      print_r($login);
       exit("Вы не правильно ввели данные!");
     }
   }
