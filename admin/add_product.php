@@ -11,7 +11,7 @@ include_once ('Product.php');
       <lable>Цена:<br><input type="text" name="price"></lable>
       <lable>Загрузите картинку:<br><input type="file" name="image" accept="image/jpeg, image/png, image/gif"></lable>
 			<input type="hidden" name="add">
-			<button type="submit" name="submit">Сохранить</button>
+			<button class="admin-form-btn btn" type="submit" name="submit">Сохранить</button>
     </div>
   </form>
 </div>

@@ -15,7 +15,7 @@
 					<span class="prod-name"><?= $product['name']?></span>
 					<span class="short-desc"><?= $product['short_desc']?></span>
 					<span class="price"><?= $product['price']?></span>
-					<a href="index.php?page=item&id=<?= $product['id']?>" class="prod-link">Подробнее</a>
+					<button class="prod-link btn" onclick="addToBasket(<?= $product['id']?>)" data-id="<?= $product['id']?>">В корзину</button>
 				</div>
 			<?php endforeach;?>
 		<?php endif;?>

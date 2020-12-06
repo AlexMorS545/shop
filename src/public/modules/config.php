@@ -34,7 +34,7 @@ function getOneItem ($connect, $id, $table) {
 function editProduct ($connect, $id, $name, $shortDesc, $fullDesc, $image, $price) {
   $id = (int)$id;
 
-  $sql = "UPDATE catalog SET name='%s', short_desc='%s', full_desc='%s', price='%d', image='%s' WHERE id='%d'";
+  $sql = "UPDATE `catalog` SET name='%s', short_desc='%s', full_desc='%s', price='%d', image='%s' WHERE id='%d'";
 
   $query = sprintf($sql, mysqli_real_escape_string($connect, $name), mysqli_real_escape_string($connect, $shortDesc), mysqli_real_escape_string($connect, $fullDesc), mysqli_real_escape_string($connect, $price),mysqli_real_escape_string($connect, $image), $id);
 
@@ -48,7 +48,7 @@ function editProduct ($connect, $id, $name, $shortDesc, $fullDesc, $image, $pric
 
 function newProduct ($connect, $name, $shortDesc, $fullDesc, $price, $image) {
 
-  $sql = "INSERT INTO catalog (name, short_desc, full_desc, price, image) VALUES ('%s', '%s', '%s', '%d', '%s')";
+  $sql = "INSERT INTO `catalog` (name, short_desc, full_desc, price, image) VALUES ('%s', '%s', '%s', '%d', '%s')";
 
   $query = sprintf($sql, mysqli_real_escape_string($connect, $name), mysqli_real_escape_string($connect, $shortDesc), mysqli_real_escape_string($connect, $fullDesc), mysqli_real_escape_string($connect, $price), mysqli_real_escape_string($connect, $image));
 
