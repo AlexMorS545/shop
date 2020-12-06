@@ -23,6 +23,20 @@ body {
 .hidden {
     display: none;
 }
+.btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    background-color: #5E6464;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 20px;
+}
+.btn:hover {
+    background-color: #acaaaa;
+}
 header {
     background: url("../images/promo.jpg") no-repeat;
     background-size: 100%;
@@ -91,6 +105,7 @@ header {
 .fa-shopping-basket:hover {
     background: #5e5e5e;
 }
+.basket-wrp,
 .user-wrp {
     position: fixed;
     top: 0;
@@ -100,6 +115,7 @@ header {
     background-color: rgba(51, 51, 51, .8);
     z-index: 5;
 }
+.basket,
 .user {
     margin: 15% auto;
     width: 800px;
@@ -108,6 +124,10 @@ header {
     position: relative;
     border-radius: 5px;
 }
+/*.basket {
+    height: 400px;
+    overflow-x: auto;
+}*/
 .fa-window-close {
     position: absolute;
     top: 10px;
@@ -146,18 +166,6 @@ header {
 .user-btn {
     width: 200px;
     padding: 15px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    box-sizing: border-box;
-    background-color: #5E6464;
-    border-radius: 5px;
-    color: white;
-    transition: background-color 0.2s ease-in-out;
-    font-size: 20px;
-}
-.user-btn:hover {
-    background-color: #acaaaa;
 }
 .promo {
     background: url("../images/promo.jpg") no-repeat;
@@ -296,9 +304,9 @@ textarea {
     padding: 10px;
 }
 .form-btn {
-    width: 150px;
+    width: 300px;
     align-self: center;
-    padding: 10px;
+    padding: 20px;
     cursor: pointer;
 }
 .cat-title {
@@ -353,32 +361,6 @@ textarea {
     margin: 20px 0 0 0;
     padding: 15px 25px;
     text-decoration: none;
-    background-color: #5E6464;
-    border-radius: 5px;
-    color: white;
-    transition: background-color 0.2s ease-in-out;
-}
-.prod-link:hover {
-    background-color: #acaaaa;
-}
-.buy-btn {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    outline: none;
-    border: none;
-    box-sizing: border-box;
-    cursor: pointer;
-    width: 55px;
-    height: 55px;
-    background-color: #5E6464;
-    color: white;
-    padding: 0;
-    border-radius: 50%;
-    font-size: 25px;
-}
-.buy-btn:hover {
-    background-color: #acaaaa;
 }
 .item-wrp {
     margin: 70px 0;
@@ -421,14 +403,7 @@ textarea {
 }
 .item-btn {
     padding: 10px 35px;
-    color: white;
-    background-color: #5E6464;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    box-sizing: border-box;
+    text-decoration: none;
 }
 .item-btn:hover {
     background-color: #acaaaa;
@@ -462,19 +437,70 @@ textarea {
     resize: none;
     margin: 0 0 20px;
 }
-.admin-form button {
+.admin-form-btn {
     width: 200px;
     margin: 20px 0 0 0;
     padding: 15px 25px;
-    background-color: #5E6464;
     border-radius: 5px;
-    color: white;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
     align-self: center;
 }
-.admin-form button:hover {
+.admin-form-btn:hover {
     background-color: #acaaaa;
+}
+.basket-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.basket-img {
+    display: block;
+    width: 100px;
+}
+.cart-name-wrp {
+    flex: 1 1;
+    margin: 0 0 0 40px;
+}
+.basket-name {
+    margin: 0 30px 0 0;
+    font-size: 26px;
+    font-weight: 600;
+}
+.count-wrp {
+    margin: 0 120px 0 0;
+    display: flex;
+    align-items: center;
+}
+.basket-count {
+    margin: 0 15px;
+    font-size: 22px;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.fa-plus,
+.fa-minus {
+    cursor: pointer;
+    border: 1px solid #5E6464;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+.fa-plus:hover,
+.fa-minus:hover {
+    color: white;
+    background-color: #5E6464;
+}
+.basket-price {
+    font-size: 24px;
+    font-weight: 600;
+}
+.cart-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1.5px;
 }

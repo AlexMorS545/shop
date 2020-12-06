@@ -13,8 +13,8 @@ $products = getAllItems($connect, 'catalog');
         <span class="prod-name"><?= $product['name']?></span>
         <span class="short-desc"><?= $product['short_desc']?></span>
         <span class="price"><?= $product['price']?></span>
-				<a href="index.php?page=edit&id=<?= $product['id']?>" class="prod-link">Изменить</a>
-				<a href="index.php?page=delete&id=<?= $product['id']?>" class="prod-link">Удалить</a>
+				<a href="index.php?page=edit&id=<?= $product['id']?>" class="prod-link btn">Изменить</a>
+				<a href="index.php?page=delete&id=<?= $product['id']?>" class="prod-link btn">Удалить</a>
       </div>
     <?php endforeach;?>
   <?php endif;?>

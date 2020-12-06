@@ -1,6 +1,6 @@
 <?php
-session_start();
 include_once ('config.php');
+session_start();
 
 if(isset($_POST['reg'])) {
   $login = trim(strip_tags($_POST['name']));
@@ -39,14 +39,21 @@ if (isset($_POST['enter'])) {
   $pass = trim(strip_tags($_POST['pass']));
 
   $users = getAllItems($connect, 'users');
-
   foreach ($users as $user) {
 
-    if($login==$user['login'] && $email==$user['email'] && md5($pass)==$user['password']) {
+    if(($login==isset($user['login'])) && ($email==isset($user['email'])) && (md5($pass)==isset($user['password']))) {
       $_SESSION['login'] = $login;
+      $_SESSION['email'] = $email;
+      $_SESSION['pass'] = $pass;
+
       header("Location: ../index.php");
+
+      if(isset($_SESSION['login']) == 'admin' && isset($_SESSION['pass']) == 'admin') {
+        header("Location: ../../../admin/index.php");
+
+      }
+
     } else {
-      print_r($user);
       exit("Вы не правильно ввели данные!");
     }
   }
@@ -54,6 +61,8 @@ if (isset($_POST['enter'])) {
 
 if (isset($_POST['exit'])) {
   unset($_SESSION['login']);
+  unset($_SESSION['email']);
+  unset($_SESSION['pass']);
   session_destroy();
   header("Location: ../index.php");
 }

@@ -20,7 +20,7 @@ $reviews = allReviews($connect);
   <form class="form" action="" method="post">
     <input type="text" name="name" placeholder="Ваше имя" required>
     <textarea name="text" cols="30" rows="10" placeholder="Оставьте ваш отзыв" required></textarea>
-    <button class="form-btn" type="submit" name="add">Оставить отзыв</button>
+    <button class="form-btn btn" type="submit" name="add">Оставить отзыв</button>
   </form>
 </div>
 

@@ -12,7 +12,7 @@ include_once ('Product.php');
       <lable>Цена:<br><input type="text" name="price" value="<?= $product['price']?>"></lable>
       <lable>Изменить картинку:<br><input type="file" name="image" accept="image/jpeg, image/png, image/gif"></lable>
       <input type="hidden" name="edit" value="<?= $product['id']?>">
-      <button type="submit" name="submit">Сохранить</button>
+      <button class="admin-form-btn btn" type="submit" name="submit">Сохранить</button>
     </div>
   </form>
 </div>
