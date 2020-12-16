@@ -1,7 +1,6 @@
 <?php
 session_start();
 include_once ('modules/basket.php');
-$itemBasket = getOneItem ($connect, $id, 'basket');
 ?>
 <div class="header-wrp">
   <div class="logo-wrp">
@@ -22,7 +21,7 @@ $itemBasket = getOneItem ($connect, $id, 'basket');
 		<?php else: ?>
 			<a class="user-name"><?= $_SESSION['login'];?></a>
 		<?php endif;?>
-			<i class="fas fa-shopping-basket"></i>
+			<i class="fas fa-shopping-basket" @click="show=!show"></i>
   </div>
 
 	<div class="user-wrp hidden" data-close="true">
