@@ -124,10 +124,10 @@ header {
     position: relative;
     border-radius: 5px;
 }
-/*.basket {
-    height: 400px;
+.basket {
+    height: 300px;
     overflow-x: auto;
-}*/
+}
 .fa-window-close {
     position: absolute;
     top: 10px;

@@ -6,7 +6,7 @@ if (isset($_POST['basketId'])) {
 
   $id = (int)$_POST['basketId'];
 
-  $item = getOneItem ($connect, $id, 'catalog');
+  $item = getOneItem($connect, $id, 'catalog');
 
   $name = $item['name'];
   $desc = $item['short_desc'];
@@ -15,8 +15,6 @@ if (isset($_POST['basketId'])) {
   $discount = $item['discount'];
 
   $itemBasket = getOneItem($connect, $id, 'basket');
-  $_SESSION['basket'] = 1;
-
   if (isset($itemBasket)) {
     $id = $itemBasket['id'];
     $count = $itemBasket['count'];
@@ -26,6 +24,7 @@ if (isset($_POST['basketId'])) {
     newProductInBasket($connect, $id, $name, $desc, $price, $image, '1', $discount);
   }
 
-  echo json_encode($itemBasket);
+  $itemsBasket = getAllItems($connect, 'basket');
+  echo json_encode($itemsBasket);
 }
-$itemsBasket = getAllItems($connect, 'basket');
+
