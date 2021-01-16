@@ -47,7 +47,7 @@ include_once ('modules/basket.php');
 	<div class="basket-wrp hidden" data-close="true">
 		<div class="basket">
 			<i class="far fa-window-close" data-close="true"></i>
-			<?php include_once ('templates/cart.php')?>
+<!--			--><?php //include_once ('templates/cart.php')?>
 		</div>
 	</div>
 

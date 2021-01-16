@@ -25,6 +25,7 @@ if (isset($_POST['basketId'])) {
   }
 
   $itemsBasket = getAllItems($connect, 'basket');
+
   echo json_encode($itemsBasket);
 }
 

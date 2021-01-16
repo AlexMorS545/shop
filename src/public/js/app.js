@@ -15,12 +15,10 @@ function renderItem(item) {
 }
 
 function renderBasket (data) {
+
 	data.forEach(item => {
 		const cart = document.querySelector('.basket')
-
 		cart.insertAdjacentHTML('beforeend', renderItem(item))
-
-		console.log(item)
 	})
 
 }
